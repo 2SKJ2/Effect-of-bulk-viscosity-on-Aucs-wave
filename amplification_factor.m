@@ -1,0 +1,7 @@
+function [G1,G2] = amplification_factor(Aj, Nc,Pe)
+%UNTITLED2 Summary of this function goes here
+%   Detailed explanation goes here
+G1=exp(((Aj*(Aj^5*Nc^4 + 12*Aj^5*Nc^3*Pe + 86*Aj^5*Nc^2*Pe^2+300*Aj^5*Nc*Pe^3 + 625*Aj^5*Pe^4 + 10*Aj^4*Nc^4 +  500*Aj^4*Nc^3*Pe + 2750*Aj^4*Nc^2*Pe^2 + 6800*Aj^4*Nc*Pe^3 +  7500*Aj^4*Pe^4 + 600*Aj^3*Nc^4 + 7100*Aj^3*Nc^3*Pe +  26800*Aj^3*Nc^2*Pe^2 + 37500*Aj^3*Nc*Pe^3 + 22500*Aj^3*Pe^4 +  6800*Aj^2*Nc^4 + 45000*Aj^2*Nc^3*Pe + 75000*Aj^2*Nc^2*Pe^2 +  45000*Aj^2*Nc*Pe^3 + 30000*Aj*Nc^4 + 90000*Aj*Nc^3*Pe +  22500*Aj*Nc^2*Pe^2 + 45000*Nc^4))^(1/2) - Aj^3*Nc^2 +  150*Aj^2*Pe^2 + 25*Aj^3*Pe^2 + 150*Aj*Nc*Pe +  4*Aj^3*Nc*Pe)/(2*Aj^3*Nc*Pe + 2*Aj^3*Pe^2 + Aj^2*Nc^2 +  25*Aj^2*Nc*Pe+ 100*Aj^2*Pe^2 + 50*Aj*Nc^2 + 150*Aj*Nc*Pe + 150*Nc^2));
+
+G2=exp((150*Aj^2*Pe^2 - Aj^3*Nc^2 - (Aj*(Aj^5*Nc^4 + 12*Aj^5*Nc^3*Pe +  86*Aj^5*Nc^2*Pe^2 + 300*Aj^5*Nc*Pe^3 + 625*Aj^5*Pe^4 + 10*Aj^4*Nc^4 +  500*Aj^4*Nc^3*Pe + 2750*Aj^4*Nc^2*Pe^2 + 6800*Aj^4*Nc*Pe^3 +  7500*Aj^4*Pe^4 + 600*Aj^3*Nc^4 + 7100*Aj^3*Nc^3*Pe + 26800*Aj^3*Nc^2*Pe^2  + 37500*Aj^3*Nc*Pe^3 + 22500*Aj^3*Pe^4 + 6800*Aj^2*Nc^4 +  45000*Aj^2*Nc^3*Pe + 75000*Aj^2*Nc^2*Pe^2 + 45000*Aj^2*Nc*Pe^3 +  30000*Aj*Nc^4 + 90000*Aj*Nc^3*Pe + 22500*Aj*Nc^2*Pe^2 +  45000*Nc^4))^(1/2) + 25*Aj^3*Pe^2 + 150*Aj*Nc*Pe +   4*Aj^3*Nc*Pe)/(2*Aj^3*Nc*Pe + 2*Aj^3*Pe^2 + Aj^2*Nc^2 +  25*Aj^2*Nc*Pe + 100*Aj^2*Pe^2 + 50*Aj*Nc^2 + 150*Aj*Nc*Pe + 150*Nc^2));
+end
